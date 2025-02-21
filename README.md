@@ -93,10 +93,10 @@ python evaluate_model.py --config config.yaml
 
 ---
 
-## **Sample Output**
+## **Performance Metrics**
 ```
-[RESULT] Keras - Latency: 12.34 ms | Throughput: 81.20 inferences/sec
-[RESULT] ONNX  - Latency: 8.56 ms | Throughput: 116.89 inferences/sec
+ONNX - Latency: 35.36 ms | Throughput: 28.28 inferences/sec
+Keras - Latency: 102.69 ms | Throughput: 9.74 inferences/sec
 ```
 
 ---

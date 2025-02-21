@@ -3,7 +3,7 @@
 import tensorflow as tf
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping, ReduceLROnPlateau
 from data_preparation import load_config, load_and_preprocess_data
-from model_definition import build_model
+from model import build_model
 import os
 
 def train_model(data_dir, img_size, batch_size, val_split, epochs, model_save_path, callbacks_config, model_config):

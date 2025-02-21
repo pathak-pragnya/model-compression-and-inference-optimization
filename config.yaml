@@ -29,3 +29,15 @@ callbacks:
     factor: 0.2
     patience: 3
     min_lr: 1e-6
+
+compression:
+  model_path: "best_model.keras"
+  save_path: "compressed_model.keras"
+  apply_pruning: true
+  apply_quantization: true
+  pruning_params:
+    pruning_schedule:
+      initial_sparsity: 0.1
+      final_sparsity: 0.5
+      begin_step: 0
+      end_step: 1000

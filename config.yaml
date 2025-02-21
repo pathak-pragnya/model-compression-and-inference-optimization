@@ -41,3 +41,11 @@ compression:
       final_sparsity: 0.5
       begin_step: 0
       end_step: 1000
+
+evaluation:
+  keras_model_path: "compressed_model.keras"
+  onnx_model_path: "compressed_model.onnx"
+  convert_to_onnx: true
+  input_shape: [224, 224, 3]
+  num_iterations: 100
+

@@ -27,8 +27,8 @@ This repository provides a comprehensive pipeline to train, compress, convert, a
 ## **Installation**
 1. **Clone the repository:**
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/pathak-pragnya/model-compression-and-inference-optimization
+cd model-compression-and-inference-optimization
 ```
 
 2. **Create and activate a virtual environment:**
@@ -46,60 +46,6 @@ pip install -r requirements.txt
 
 ## **Configuration**
 All parameters are managed via the `config.yaml` file.
-
-### Sample `config.yaml`:
-```yaml
-data:
-  data_dir: "path_to_dataset"
-  img_size: [224, 224]
-  batch_size: 32
-  validation_split: 0.2
-  visualize_samples: true
-  num_samples: 5
-
-model:
-  input_shape: [224, 224, 3]
-  num_classes: 10
-  base_model_trainable: false
-  dropout_rate: 0.3
-
-train:
-  epochs: 20
-  model_save_path: "best_model.keras"
-
-callbacks:
-  model_checkpoint:
-    enabled: true
-  early_stopping:
-    enabled: true
-    patience: 5
-  reduce_lr:
-    enabled: true
-    factor: 0.2
-    patience: 3
-    min_lr: 1e-6
-
-compression:
-  model_path: "best_model.keras"
-  save_path: "compressed_model.keras"
-  apply_pruning: true
-  apply_quantization: true
-  pruning_params:
-    pruning_schedule:
-      initial_sparsity: 0.1
-      final_sparsity: 0.5
-      begin_step: 0
-      end_step: 1000
-
-evaluation:
-  keras_model_path: "compressed_model.keras"
-  onnx_model_path: "compressed_model.onnx"
-  convert_to_onnx: true
-  input_shape: [224, 224, 3]
-  num_iterations: 100
-```
-
----
 
 ## **Usage**
 ### 1. **Data Preparation**

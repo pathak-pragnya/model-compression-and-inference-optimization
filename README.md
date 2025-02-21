@@ -59,7 +59,7 @@ python data_preparation.py --config config.yaml
 
 ### 2. **Model Definition**
 ```bash
-python model_definition.py --config config.yaml
+python model.py --config config.yaml
 ```
 - Builds a MobileNetV2-based model.
 - Freezes or unfreezes layers based on the config.

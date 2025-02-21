@@ -7,3 +7,9 @@ data:
 visualization:
   enabled: true
   num_samples: 5
+
+model:
+  input_shape: [224, 224, 3]
+  num_classes: 10
+  base_model_trainable: false
+  dropout_rate: 0.3

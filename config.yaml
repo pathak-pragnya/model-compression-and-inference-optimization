@@ -1,0 +1,9 @@
+data:
+  data_dir: "path_to_your_dataset"
+  img_size: [224, 224]
+  batch_size: 32
+  validation_split: 0.2
+
+visualization:
+  enabled: true
+  num_samples: 5

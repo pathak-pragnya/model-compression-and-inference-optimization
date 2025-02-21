@@ -13,3 +13,19 @@ model:
   num_classes: 10
   base_model_trainable: false
   dropout_rate: 0.3
+
+train:
+  epochs: 20
+  model_save_path: "best_model.keras"
+
+callbacks:
+  model_checkpoint:
+    enabled: true
+  early_stopping:
+    enabled: true
+    patience: 5
+  reduce_lr:
+    enabled: true
+    factor: 0.2
+    patience: 3
+    min_lr: 1e-6
